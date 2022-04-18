@@ -11,7 +11,7 @@ export const EditCity = () => {
   useEffect(() => {
     axios.get("http://localhost:8080/country").then((e) => {
       setCountries([...e.data]);
-    });
+    },[]);
 
     axios.get(`http://localhost:8080/city/${id}`).then((e) => {
       setCity({ ...e.data });
